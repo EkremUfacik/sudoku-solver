@@ -10,7 +10,13 @@ const Cell = ({ num, numberList, setNumberList, index }) => {
   console.log(numberList);
 
   return (
-    <input type="number" value={num != 0 ? num : ""} onChange={handleChange} />
+    <input
+      type="number"
+      max="9"
+      min="0"
+      value={num != 0 ? (num > 9 ? 9 : num) : ""}
+      onChange={handleChange}
+    />
   );
 };
 

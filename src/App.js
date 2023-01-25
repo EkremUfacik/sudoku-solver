@@ -29,16 +29,21 @@ function App() {
   };
 
   return (
-    <div className="container">
-      {numberList?.map((num, index) => (
-        <Cell
-          num={num}
-          numberList={numberList}
-          setNumberList={setNumberList}
-          index={index}
-        />
-      ))}
-      <button onClick={handleSolve}>Solve</button>
+    <div>
+      <h1>Enter the Sudoku to Solve</h1>
+      <div className="container">
+        {numberList?.map((num, index) => (
+          <Cell
+            num={num}
+            numberList={numberList}
+            setNumberList={setNumberList}
+            index={index}
+          />
+        ))}
+      </div>
+      <div className="buttonDiv">
+        <button onClick={handleSolve}>Solve</button>
+      </div>
     </div>
   );
 }
