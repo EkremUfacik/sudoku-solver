@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+#root {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    /* text-align: center; */
+    width: 50rem;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(9, 1fr);
+    /* grid-template-rows: repeat(9, minmax(5vw, 5rem)); */
+    /* grid-template-rows: repeat(9, minmax(, 5rem)); */
+    padding: 2rem;
+}
+
+input {
+    width: 10vw;
+    height: 10vw;
+    max-width: 5rem;
+    max-height: 5rem;
+    font-size: 2rem;
+    text-align: center;
+
+}
