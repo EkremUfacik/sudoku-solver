@@ -14,7 +14,7 @@ const Cell = ({ num, numberList, setNumberList, index }) => {
       type="number"
       max="9"
       min="0"
-      value={num != 0 ? (num > 9 ? 9 : num) : ""}
+      value={num !== 0 ? (num > 9 ? 9 : num) : ""}
       onChange={handleChange}
     />
   );
