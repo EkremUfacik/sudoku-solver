@@ -2,30 +2,25 @@ import { useState } from "react";
 import Cell from "./components/Cell";
 import solve from "./functions";
 
-// useEffect(() => {
-//   setNumberList(Array(81).fill(0));
-// }, []);
-
 function App() {
   const [numberList, setNumberList] = useState(Array(81).fill(0));
 
-  const formatList = (solvedList) => {
-    let formList = [];
+  const formatList = (unsolvedSudoku) => {
+    let formatUnsolved = [];
     for (let i = 0; i < 9; i++) {
-      formList.push(solvedList.slice(i * 9, i * 9 + 9));
+      formatUnsolved.push(unsolvedSudoku.slice(i * 9, i * 9 + 9));
     }
-    return formList;
+    return formatUnsolved;
   };
 
   const handleSolve = () => {
-    let format = formatList([...numberList]);
-    solve(format);
-    console.log(format);
-    let result = format.reduce((acc, el) => {
+    let formattedUnsolved = formatList([...numberList]);
+    solve(formattedUnsolved);
+    let formattedSolved = formattedUnsolved.reduce((acc, el) => {
       acc = [...acc, ...el];
       return acc;
     }, []);
-    setNumberList(result);
+    setNumberList(formattedSolved);
   };
 
   const handleReset = () => {
