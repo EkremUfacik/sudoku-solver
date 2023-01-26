@@ -28,6 +28,10 @@ function App() {
     setNumberList(result);
   };
 
+  const handleReset = () => {
+    setNumberList(Array(81).fill(0));
+  };
+
   return (
     <div>
       <h1>Enter the Sudoku to Solve</h1>
@@ -43,6 +47,7 @@ function App() {
       </div>
       <div className="buttonDiv">
         <button onClick={handleSolve}>Solve</button>
+        <button onClick={handleReset}>Reset</button>
       </div>
     </div>
   );

@@ -25,6 +25,7 @@ h1 {
     display: grid;
     justify-content: center;
     grid-template-columns: repeat(9, auto);
+    /* grid-template-rows: repeat(9, auto); */
     border: 2px solid black;
     border-left: 3px solid black;
     border-top: 3px solid black;
@@ -63,8 +64,10 @@ input:nth-child(n+46):nth-child(-n+54) {
 }
 
 .buttonDiv {
-    text-align: center;
+    display: flex;
+    justify-content: center;
     padding: 1rem;
+    gap: 1rem;
 }
 
 button {
