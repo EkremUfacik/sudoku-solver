@@ -23,6 +23,7 @@ function App() {
       return acc;
     }, []);
     console.log("ee");
+    console.log(formattedSolved);
     if (formattedSolved.includes(0)) {
       setError(true);
       setNumberList(Array(81).fill(0));

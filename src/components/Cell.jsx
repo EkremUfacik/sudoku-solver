@@ -3,11 +3,9 @@ import React from "react";
 const Cell = ({ numberList, setNumberList }) => {
   const handleChange = (e, index) => {
     let changeNum = [...numberList];
-    changeNum[index] = Number(e.target.value);
+    changeNum[index] = Number(e.target.value > 9 ? "9" : e.target.value);
     setNumberList(changeNum);
   };
-
-  console.log(numberList);
 
   return (
     <div className="container">
