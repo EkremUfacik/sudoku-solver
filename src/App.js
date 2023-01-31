@@ -41,9 +41,9 @@ function App() {
     <div>
       <h1>Enter the Sudoku to Solve</h1>
       {error && <p className="error">Entered sudoku is invalid</p>}
-      <div className="contain">
-        <Cell numberList={numberList} setNumberList={setNumberList} />
-      </div>
+
+      <Cell numberList={numberList} setNumberList={setNumberList} />
+
       <div className="buttonDiv">
         <button onClick={handleSolve}>Solve</button>
         <button onClick={handleReset}>Reset</button>

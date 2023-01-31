@@ -8,7 +8,7 @@ const Cell = ({ numberList, setNumberList }) => {
   };
 
   return (
-    <div className="container">
+    <div className="cells-container">
       {numberList?.map((num, index) => (
         <input
           type="number"
